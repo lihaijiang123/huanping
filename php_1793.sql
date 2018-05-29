@@ -1,4 +1,4 @@
-
+   
 DROP TABLE IF EXISTS `admin_article`;
 CREATE TABLE `admin_article` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
