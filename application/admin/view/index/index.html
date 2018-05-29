@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/nifty.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/plugins/morris-js/morris.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+
+    <link href="__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="__PUBLIC__/plugins/pace/pace.min.js"></script>
+    <script src="__PUBLIC__/js/jquery-2.2.4.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/js/nifty.min.js"></script>
+    <script src="__PUBLIC__/js/demo/nifty-demo.min.js"></script>
+    <script src="__PUBLIC__/plugins/morris-js/morris.min.js"></script>
+    <script src="__PUBLIC__/plugins/morris-js/raphael-js/raphael.min.js"></script>
+    <script src="__PUBLIC__/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="__PUBLIC__/js/demo/dashboard.js"></script>
+
+
+</head>
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a href="{:url('Admin/Index/index')}" class="navbar-brand">
+                        <img src="__PUBLIC__/img/logo.png" alt="Nifty Logo" class="brand-icon">
+                        <div class="brand-title">
+                            <span class="brand-text">许卫旗</span>
+                        </div>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+
+
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <!--Navigation toogle button-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="tgl-menu-btn">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="demo-pli-view-list"></i>
+                            </a>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Navigation toogle button-->
+
+
+
+                        <!--Notification dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                       
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End notifications dropdown-->
+
+
+
+                        <!--Mega dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                       
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End mega dropdown-->
+
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        <!--Language selector-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="dropdown">
+                           
+                            <!--Language selector menu-->
+                            <ul class="head-list dropdown-menu">
+                                <li>
+                                    <!--English-->
+                                    <a href="#">
+                                        <img class="lang-flag" src="__PUBLIC__/img/flags/united-kingdom.png" alt="English">
+                                        <span class="lang-id">EN</span>
+                                        <span class="lang-name">English</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!--France-->
+                                    <a href="#">
+                                        <img class="lang-flag" src="__PUBLIC__/img/flags/france.png" alt="France">
+                                        <span class="lang-id">FR</span>
+                                        <span class="lang-name">Fran&ccedil;ais</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!--Germany-->
+                                    <a href="#">
+                                        <img class="lang-flag" src="__PUBLIC__/img/flags/germany.png" alt="Germany">
+                                        <span class="lang-id">DE</span>
+                                        <span class="lang-name">Deutsch</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!--Italy-->
+                                    <a href="#">
+                                        <img class="lang-flag" src="__PUBLIC__/img/flags/italy.png" alt="Italy">
+                                        <span class="lang-id">IT</span>
+                                        <span class="lang-name">Italiano</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!--Spain-->
+                                    <a href="#">
+                                        <img class="lang-flag" src="__PUBLIC__/img/flags/spain.png" alt="Spain">
+                                        <span class="lang-id">ES</span>
+                                        <span class="lang-name">Espa&ntilde;ol</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End language selector-->
+
+
+
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <!--<img class="img-circle img-user media-object" src="images/profile-photos/1.png" alt="Profile Picture">-->
+                                    <i class="demo-pli-male ic-user"></i>
+                                </span>
+                                <div class="username hidden-xs"><h4 class="text-main"><p class="text-pink"><b>欢迎：</b>{$Think.session.user.username}</p></h4></div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+                                <!-- Dropdown heading  -->
+                                <div class="pad-all bord-btm">
+                                    <p class="text-main mar-btm"><span class="text-bold">750GB</span> of 1,000GB Used</p>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar" style="width: 70%;">
+                                            <span class="sr-only">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-male icon-lg icon-fw"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">9</span>
+                                            <i class="demo-pli-mail icon-lg icon-fw"></i> Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-success pull-right">New</span>
+                                            <i class="demo-pli-gear icon-lg icon-fw"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-information icon-lg icon-fw"></i> Help
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-computer-secure icon-lg icon-fw"></i> Lock screen
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="{:url('Admin/Index/logout')}" class="btn btn-primary">
+                                        <i class="demo-pli-unlock"></i> Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!-- <div id="page-title">
+                    <h1 class="page-header text-overflow">Dashboard</h1>
+
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+
+
+                <!--Page content-->
+                <!--===================================================-->
+             <h1>欢迎来到后台管理！</h1>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            <!--ASIDE-->
+            <!--===================================================-->
+            <!--===================================================-->
+            <!--END ASIDE-->
+
+            
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--Menu-->
+                    <!--================================-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+
+                                <!--Profile Widget-->
+                                <!--================================-->
+                                <div id="mainnav-profile" class="mainnav-profile">
+                                    <div class="profile-wrap">
+                                        <div class="pad-btm">
+                                            <span class="label label-success pull-right">New</span>
+                                            <img class="img-circle img-sm img-border" src="__PUBLIC__/img/profile-photos/1.png" alt="Profile Picture">
+                                        </div>
+                                        <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                           
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <!--Shortcut buttons-->
+                                <!--================================-->
+                              
+                                <!--================================-->
+                                <!--End shortcut buttons-->
+
+
+                                <ul id="mainnav-menu" class="list-group">
+                        
+                                    
+                                    <!--Menu list item-->
+                                  
+                        
+                                    <!--Menu list item-->
+                                  
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-psi-gear-2"></i>
+                                            <span class="menu-title">
+                                                <strong>权限控制</strong>
+                                                <!-- <span class="pull-right badge badge-warning">24</span> -->
+                                            </span>
+                                             <i class="arrow"></i>
+                                        </a>
+
+                                        <ul class="collapse">
+                                            <li><a href="{:url('Admin/Rule/rule_list')}">权限管理</a></li>
+                                            <li><a href="{:url('Admin/Rule/rule_group')}">角色管理</a></li>
+                                            <li><a href="{:url('Admin/User/index')}">用户管理</a></li>
+                                        </ul>
+                                    </li>
+
+                                   
+                                </ul>
+
+                                <!--Widget-->
+                                <!--================================-->
+                                <div class="mainnav-widget">
+
+                                    <!-- Show the button on collapsed navigation -->
+                                    <div class="show-small">
+                                        <a href="#" data-toggle="menu-widget" data-target="#demo-wg-server">
+                                            <i class="demo-pli-monitor-2"></i>
+                                        </a>
+                                    </div>
+
+                                    <!-- Hide the content on collapsed navigation -->
+                                  
+                                </div>
+                                <!--================================-->
+                                <!--End widget-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--================================-->
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                You have <a href="#" class="text-bold text-main"><span class="label label-danger">3</span> pending action.</a>
+            </div>
+
+
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="hide-fixed pull-right pad-rgt">
+                14GB of <strong>512GB</strong> Free.
+            </div>
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; 2016 Your Company</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+
+    
+        <!-- SETTINGS - DEMO PURPOSE ONLY -->
+    <!-- END SETTINGS -->
+
+
+</body>
+</html>
